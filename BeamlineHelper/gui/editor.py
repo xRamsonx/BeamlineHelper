@@ -42,22 +42,24 @@ class Editor(QWidget):
         
         
     def exportToOrigin(self):
+        try:
+            import originpro
+        except:
+            QMessageBox.critical(
+                self,
+                "Error exporting to origin",
+                "Make sure you installed originpro correctly using \n \"pip install --upgrade originpro\"",
+                buttons=QMessageBox.Cancel,
+                #defaultButton=QMessageBox.Cancel,
+            )
+            return
         options = QFileDialog.Options()
         # options |= QFileDialog.DontUseNativeDialog
         fileName, _ = QFileDialog.getSaveFileName(
             None, "Save File", "", "Origin Notebook (*.opju)", options=options
         )
         if fileName:
-            try:
-                bh.OriginLoader(self.beamtime).initNotebook(self.datapath,fileName,visible=True)
-            except:
-                QMessageBox.critical(
-                    self,
-                    "Error exporting to origin",
-                    "Make sure you installed originpro correctly using \n \"pip install --upgrade originpro\"",
-                    buttons=QMessageBox.Cancel,
-                    #defaultButton=QMessageBox.Cancel,
-                )
+            bh.OriginLoader(self.beamtime).initNotebook(fileName,visible=True)
 
     def edit_collumns(self):
         dlg = QMessageBox()

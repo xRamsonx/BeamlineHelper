@@ -27,7 +27,8 @@ try:
     #check if originpro is installed
     import originpro
     print('originpro installed')
-    from BeamlineHelper.origin import Origin
+    from BeamlineHelper.origin import OriginLoader
+    #print()
     __all__.append['Origin']
 except:
     warnings.warn('\noriginpro is not installed.\nIf you want to use origin, make sure you installed origin on your machine and install originpro manualy using \'pip install originpro\' ',ImportWarning,stacklevel=2)
