@@ -104,7 +104,7 @@ def generate_shortcut():
     make_shortcut(
         main_script_path,  # Path to your main script
         name='BeamlineHelper',  # Shortcut name
-        description='Orginizer of your beamtime',
+        description='Organizer of your beamtime',
         icon=icon_path,  # Path to your application icon
         terminal=False,  # Set this to True if your application needs a terminal
     )

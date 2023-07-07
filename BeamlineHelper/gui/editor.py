@@ -54,7 +54,7 @@ class Editor(QWidget):
                 QMessageBox.critical(
                     self,
                     "Error exporting to origin",
-                    "Make sure you installed originpro correctly using \"pip install --upgrade originpro\"",
+                    "Make sure you installed originpro correctly using \n \"pip install --upgrade originpro\"",
                     buttons=QMessageBox.Cancel,
                     #defaultButton=QMessageBox.Cancel,
                 )
