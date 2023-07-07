@@ -26,6 +26,7 @@ __all__=['Beamtime','Config','DataFile','Plot','Scan','Commands','StartWindow']
 try:
     #check if originpro is installed
     import originpro
+    print('originpro installed')
     from origin import Origin
     __all__.append['Origin']
 except:

@@ -41,8 +41,8 @@ def init_app():
     except:
         pass
     
-    import xspec_reshuffler
-    package_dir = os.path.abspath(os.path.join(os.path.dirname(xspec_reshuffler.__file__), '..'))
+    import BeamlineHelper
+    package_dir = os.path.abspath(os.path.join(os.path.dirname(BeamlineHelper.__file__), '..'))
     # if sys.platform == 'win32':  # For Windows
     #     package_dir = os.path.join(sys.prefix, 'Lib', 'site-packages')
     # else:  # For Linux
@@ -86,8 +86,8 @@ def init_app():
     app.exec_()
     
 def generate_shortcut():
-    import xspec_reshuffler
-    package_dir = os.path.abspath(os.path.join(os.path.dirname(xspec_reshuffler.__file__), '..'))
+    import BeamlineHelper
+    package_dir = os.path.abspath(os.path.join(os.path.dirname(BeamlineHelper.__file__), '..'))
     # if sys.platform == 'win32':  # For Windows
     #     package_dir = os.path.join(sys.prefix, 'Lib', 'site-packages')
     # else:  # For Linux

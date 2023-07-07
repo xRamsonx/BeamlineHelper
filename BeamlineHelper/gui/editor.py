@@ -53,10 +53,10 @@ class Editor(QWidget):
             except:
                 QMessageBox.critical(
                     self,
-                    "Error loading the data",
-                    "Make sure you dragged in the .h5 file containing the measurement and did the emission callibration",
+                    "Error exporting to origin",
+                    "Make sure you installed originpro correctly using \"pip install --upgrade originpro\"",
                     buttons=QMessageBox.Cancel,
-                    defaultButton=QMessageBox.Cancel,
+                    #defaultButton=QMessageBox.Cancel,
                 )
 
     def edit_collumns(self):

@@ -17,7 +17,7 @@ setup(
     license='MIT License',
     packages=['BeamlineHelper'],
     include_package_data=True,
-    package_data={'':['gui/*']},
+    package_data={'':['gui/*','gui/icons/*']},
     install_requires=['matplotlib',
                       'numpy',
                       'python-dateutil',
