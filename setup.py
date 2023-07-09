@@ -9,7 +9,7 @@ from setuptools import setup
 
 setup(
     name='BeamlineHelper',
-    version='0.1.2',    
+    version='0.1.3',    
     description='A example Python package',
     url='https://github.com/xRamsonx/BeamlineHelper',
     author='Kai Arnold',
@@ -17,7 +17,7 @@ setup(
     license='MIT License',
     packages=['BeamlineHelper'],
     include_package_data=True,
-    package_data={'':['gui/*','gui/icons/*']},
+    package_data={'':['icons/*','gui/*']},
     install_requires=['matplotlib',
                       'numpy',
                       'python-dateutil',
