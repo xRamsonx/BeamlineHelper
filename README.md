@@ -15,3 +15,7 @@ Otherwise you can generate a desktop shortcut using:
 ```console
 BeamlineHelper -s
 ```
+## Known issues
+- Can not drag and drop, when starting from console on windows. 
+- No easy way to stop the origin import
+- Icons not working as intended
