@@ -48,8 +48,7 @@ def init_app():
     # else:  # For Linux
     #     package_dir = os.path.join(sys.prefix, 'lib', 'python{}'.format(sys.version_info[0]), 'site-packages')
     icon_path = os.path.join(
-        package_dir,
-        'gui',  # Package name/folder
+        package_dir,  # Package name/folder
         'icons'
     )
     icon1=os.path.join(
@@ -95,7 +94,6 @@ def generate_shortcut():
     main_script_path = os.path.join(package_dir, 'BeamlineHelper','gui', 'main.py')
     icon_path = os.path.join(
         package_dir,
-        'gui',
         'icons',  # Package name/folder
         'icon.ico'
     )
