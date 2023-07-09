@@ -42,7 +42,7 @@ def init_app():
         pass
     
     import BeamlineHelper
-    package_dir = os.path.abspath(os.path.join(os.path.dirname(BeamlineHelper.__file__), '..'))
+    package_dir = os.path.abspath(os.path.join(os.path.dirname(BeamlineHelper.__file__)))
     # if sys.platform == 'win32':  # For Windows
     #     package_dir = os.path.join(sys.prefix, 'Lib', 'site-packages')
     # else:  # For Linux
@@ -59,6 +59,7 @@ def init_app():
         icon_path,
         '256.ico'
     )   
+    print(icon1)
     #set fontsize:
     # Get the default font
     # defaultFont = QtWidgets.QApplication.font()
@@ -86,7 +87,7 @@ def init_app():
     
 def generate_shortcut():
     import BeamlineHelper
-    package_dir = os.path.abspath(os.path.join(os.path.dirname(BeamlineHelper.__file__), '..'))
+    package_dir = os.path.abspath(os.path.join(os.path.dirname(BeamlineHelper.__file__)))
     # if sys.platform == 'win32':  # For Windows
     #     package_dir = os.path.join(sys.prefix, 'Lib', 'site-packages')
     # else:  # For Linux
