@@ -41,24 +41,24 @@ def init_app():
     except:
         pass
     
-    # import BeamlineHelper
-    # package_dir = os.path.abspath(os.path.join(os.path.dirname(BeamlineHelper.__file__)))
-    # # if sys.platform == 'win32':  # For Windows
-    # #     package_dir = os.path.join(sys.prefix, 'Lib', 'site-packages')
-    # # else:  # For Linux
-    # #     package_dir = os.path.join(sys.prefix, 'lib', 'python{}'.format(sys.version_info[0]), 'site-packages')
-    # icon_path = os.path.join(
-    #     package_dir,  # Package name/folder
-    #     'icons'
-    # )
-    # icon1=os.path.join(
-    #     icon_path,
-    #     '48.ico'
-    # )   
-    # icon2=os.path.join(
-    #     icon_path,
-    #     '256.ico'
-    # )   
+    import BeamlineHelper
+    package_dir = os.path.abspath(os.path.join(os.path.dirname(BeamlineHelper.__file__)))
+    # if sys.platform == 'win32':  # For Windows
+    #     package_dir = os.path.join(sys.prefix, 'Lib', 'site-packages')
+    # else:  # For Linux
+    #     package_dir = os.path.join(sys.prefix, 'lib', 'python{}'.format(sys.version_info[0]), 'site-packages')
+    icon_path = os.path.join(
+        package_dir,  # Package name/folder
+        'icons'
+    )
+    icon1=os.path.join(
+        icon_path,
+        '48.ico'
+    )   
+    icon2=os.path.join(
+        icon_path,
+        '256.ico'
+    )   
     #set fontsize:
     # Get the default font
     # defaultFont = QtWidgets.QApplication.font()
@@ -78,8 +78,8 @@ def init_app():
     QCoreApplication.setAttribute(Qt.AA_EnableHighDpiScaling, True)  # Enable high DPI scaling
     app = QApplication(sys.argv)
     app_icon = QIcon()
-    # app_icon.addFile(icon1, QSize(48, 48))
-    # app_icon.addFile(icon2, QSize(256, 256))
+    app_icon.addFile(icon1, QSize(48, 48))
+    app_icon.addFile(icon2, QSize(256, 256))
     window = StartWindow(app_icon)
     window.show()
     app.exec_()
