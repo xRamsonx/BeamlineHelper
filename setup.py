@@ -9,7 +9,7 @@ from setuptools import setup
 
 setup(
     name='BeamlineHelper',
-    version='0.1.6',    
+    version='0.1.7',    
     description='A example Python package',
     url='https://github.com/xRamsonx/BeamlineHelper',
     author='Kai Arnold',
