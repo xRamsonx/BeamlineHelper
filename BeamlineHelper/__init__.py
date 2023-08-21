@@ -20,7 +20,6 @@ from BeamlineHelper.gui import StartWindow
 #del beamtime,config,datafile,plot,scan
 
 #define __all__ for import * applications
-__all__=['Beamtime','Config','DataFile','Plot','Scan','Commands','StartWindow']
 
 #handle originpro for the cases that origin is not installed on the machine (eg. Linux)
 try:
@@ -28,10 +27,10 @@ try:
     import originpro
     print('originpro installed')
     from BeamlineHelper.origin import OriginLoader
-    #print()
-    __all__.append['Origin']
+    __all__=['Beamtime','Config','DataFile','Plot','Scan','Commands','StartWindow','OriginLoader']
 except:
     warnings.warn('\noriginpro is not installed.\nIf you want to use origin, make sure you installed origin on your machine and install originpro manualy using \'pip install originpro\' ',ImportWarning,stacklevel=2)
-    
+    __all__=['Beamtime','Config','DataFile','Plot','Scan','Commands','StartWindow']
+
 
 
