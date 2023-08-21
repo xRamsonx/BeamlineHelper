@@ -49,7 +49,20 @@ class Config:
         self.edges = self.csv_read("edges.csv", 6)
         self.timeline = self.csv_read("timeline.csv", 11)
 
-    def make(self, list_of_collumns, ignore=[], force=False):
+    def make(self, list_of_collumns=[
+            "Measurement",
+            "Date",
+            "Time",
+            "Filename",
+            "#scan",
+            "Command",
+            "Sampletype",
+            "Sample",
+            "Mask",
+            "Data_Points",
+            "Shift",
+            "Group",
+        ], ignore=[], force=False):
         """
         Creates the timeline.csv, axis.csv and edges.csv files of the current datapath
         if they don't exist yet or force is specified.
@@ -81,7 +94,7 @@ class Config:
             self.make_edge()
         else:
             self.clean()
-            print("Config already exists. To overwrite it, use the argument force=True")
+            print("Config already exists. To overwrite it, use the argument force=True in config.make()")
 
     def clean(self):
         """
@@ -154,6 +167,8 @@ class Config:
                     out[-1][3] = "APD"
                 elif "Detector" in scan.longnames:
                     out[-1][3] = "Detector"
+                if "Ioni1" in scan.longnames:
+                    out[-1][4] = "Ioni1"
         np.savetxt(path + "/axis.csv", out, delimiter=";", fmt="%s")
 
     def make_edge(self):
