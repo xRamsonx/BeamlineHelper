@@ -59,7 +59,6 @@ def init_app():
         icon_path,
         '256.ico'
     )   
-    print(icon1)
     #set fontsize:
     # Get the default font
     # defaultFont = QtWidgets.QApplication.font()

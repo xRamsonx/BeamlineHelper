@@ -25,7 +25,7 @@ setup(
                       'PyQt5'
                       ],
     entry_points={
-        'gui_scripts': [
+        'console_scripts': [
             'BeamlineHelper = BeamlineHelper.gui.main:run',
         ],
     },

@@ -58,7 +58,7 @@ class DragAndDropLabelwithButton(QFrame):
 
     def chooseFile(self):
         options = QFileDialog.Options()
-        self.file_path, _ = QFileDialog.getExistingDirectory(
+        self.file_path = QFileDialog.getExistingDirectory(
             self,
             "Choose your Beamtimefolder",
             "",
