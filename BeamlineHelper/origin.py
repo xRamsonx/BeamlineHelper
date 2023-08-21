@@ -62,7 +62,6 @@ class OriginLoader():
         AllData=self.beamtime.read_data()
         for scan in AllData:
             if firstdata:
-                date=scan.date.strftime("%d-%m-%Y")
                 firstdata=False
             op.pe.cd('/UNTITLED')
             Group=scan.measurement
@@ -71,7 +70,7 @@ class OriginLoader():
                     firstfolder=False
                     op.pe.cd('Folder1')
                     op.pe.active_folder().name=f'Dataset {Group}'
-                    currentBook=op.find_sheet('w', 'Book1').get_book()
+                    currentBook=op.find_sheet('w', 'Sheet1').get_book()
                     currentBook.lname=scan.filename
                 else: 
                     op.pe.mkdir(f'Dataset {Group}')

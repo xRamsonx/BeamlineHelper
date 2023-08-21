@@ -91,7 +91,7 @@ def generate_shortcut():
     #     package_dir = os.path.join(sys.prefix, 'Lib', 'site-packages')
     # else:  # For Linux
     #     package_dir = os.path.join(sys.prefix, 'lib', 'python{}'.format(sys.version_info[0]), 'site-packages')
-    main_script_path = os.path.join(package_dir, 'BeamlineHelper','gui', 'main.py')
+    main_script_path = os.path.join(package_dir,'gui', 'main.py')
     icon_path = os.path.join(
         package_dir,
         'icons',  # Package name/folder

@@ -8,7 +8,7 @@ Created on Wed Jun 14 18:24:21 2023
 from PyQt5.QtWidgets import QMainWindow, QVBoxLayout, QHBoxLayout, QWidget, QTabWidget, QSplitter
 from PyQt5.QtCore import Qt
 
-import BeamlineHelper as bh
+from BeamlineHelper import Beamtime
 from BeamlineHelper.gui.widgets import DragAndDropLabelwithButton
 from BeamlineHelper.gui.timeline import TimelineViewer
 from BeamlineHelper.gui.editor import Editor
@@ -60,7 +60,7 @@ class BeamtimeViewer(QWidget):
                         "Shift",
                         "Group"
                         ]
-        self.beamtime=bh.Beamtime(datapath,list_of_collums)
+        self.beamtime=Beamtime(datapath,list_of_collums)
         
         self.currentSelection={}
         self.scan_plot_list={}
