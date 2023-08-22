@@ -70,7 +70,7 @@ class OriginLoader():
                     firstfolder=False
                     op.pe.cd('Folder1')
                     op.pe.active_folder().name=f'Dataset {Group}'
-                    currentBook=op.find_sheet('w', 'Sheet1').get_book()
+                    currentBook=op.find_book()
                     currentBook.lname=scan.filename
                 else: 
                     op.pe.mkdir(f'Dataset {Group}')

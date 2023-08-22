@@ -5,13 +5,7 @@ Created on Thu Jun 15 11:51:56 2023
 
 @author: kai
 """
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Created on Wed Jun 14 21:07:45 2023
 
-@author: kai
-"""
 import os
 import sys
 import argparse
@@ -43,10 +37,7 @@ def init_app():
     
     import BeamlineHelper
     package_dir = os.path.abspath(os.path.join(os.path.dirname(BeamlineHelper.__file__)))
-    # if sys.platform == 'win32':  # For Windows
-    #     package_dir = os.path.join(sys.prefix, 'Lib', 'site-packages')
-    # else:  # For Linux
-    #     package_dir = os.path.join(sys.prefix, 'lib', 'python{}'.format(sys.version_info[0]), 'site-packages')
+
     icon_path = os.path.join(
         package_dir,  # Package name/folder
         'icons'
@@ -87,10 +78,7 @@ def init_app():
 def generate_shortcut():
     import BeamlineHelper
     package_dir = os.path.abspath(os.path.join(os.path.dirname(BeamlineHelper.__file__)))
-    # if sys.platform == 'win32':  # For Windows
-    #     package_dir = os.path.join(sys.prefix, 'Lib', 'site-packages')
-    # else:  # For Linux
-    #     package_dir = os.path.join(sys.prefix, 'lib', 'python{}'.format(sys.version_info[0]), 'site-packages')
+
     main_script_path = os.path.join(package_dir,'gui', 'main.py')
     icon_path = os.path.join(
         package_dir,
